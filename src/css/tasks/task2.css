@@ -1,0 +1,33 @@
+.feedback-form {
+    width: 480px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .feedback-form>label {
+    width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .feedback-form input,
+    .feedback-form textarea {
+    font: inherit;
+    padding: 8px;
+    outline: 1px solid black;
+    
+    }
+    
+    .feedback-form textarea {
+    resize: none;
+    }
+    
+    .feedback-form button {
+    padding: 10px;
+    border: 1px solid black;
+    }
+    
+    

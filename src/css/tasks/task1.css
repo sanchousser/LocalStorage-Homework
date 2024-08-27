@@ -1,0 +1,45 @@
+.home_link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+  }
+
+  .home_link:hover {
+    text-decoration: underline;
+  }
+
+  .todo_section {
+    margin-top: 20px;
+  }
+
+  .todo_title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #007BFF;
+    text-align: center;
+  }
+
+  .todo__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .todo__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .todo__input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }

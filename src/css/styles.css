@@ -1,0 +1,6 @@
+@import './base/reset.css';
+@import './base/commom.css';
+@import './components/content.css';
+@import './tasks/task1.css';
+@import './tasks/task2.css';
+@import './tasks/task3.css';

@@ -1,0 +1,22 @@
+user-form {
+  width: 480px;
+}
+
+.user-form > label {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.user-form input {
+  font: inherit;
+  outline: 1px solid #000;
+  padding: 8px;
+}
+
+.user-form button {
+  border: 1px solid #000;
+  padding: 10px;
+}
+/*# sourceMappingURL=task3.df76d752.css.map */
