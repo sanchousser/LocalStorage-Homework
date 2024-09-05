@@ -590,6 +590,7 @@ const url = document.getElementById("bookmarkUrl");
 const list = document.getElementById("bookmarksList");
 const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
 form.addEventListener("submit", onBookmarkAdd);
+list.addEventListener("click", deleteBtn);
 renderBookmarks();
 function onBookmarkAdd(e) {
     e.preventDefault();
@@ -611,19 +612,23 @@ function saveBookmarks() {
 function renderBookmarks() {
     list.innerHTML = "";
     bookmarks.forEach((bookmark)=>{
-        list.insertAdjacentHTML("beforeend", `<li><a href="${bookmark.url}">${bookmark.title}</a><button type="button class="delete-btn">delete bookmark</button></li>`);
+        list.insertAdjacentHTML("beforeend", `<li><a href="${bookmark.url}">${bookmark.title}</a><button type="button" class="delete-btn">delete bookmark</button></li>`);
     });
 }
-// function deleteBtn(e) {
-//     if(e.target.classList('delete-btn')) {
-//     }
-// }
-window.deleteBtn = (index)=>{
-    const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
-    bookmarks.splice(index, 1);
-    saveBookmarks(bookmarks);
-    renderBookmarks();
-};
+function deleteBtn(e) {
+    if (e.target.classList.contains("delete-btn")) {
+        const item = e.target.closest("li");
+        const index = Array.from(list.children).indexOf(item);
+        bookmarks.splice(index, 1);
+        saveBookmarks();
+        item.remove();
+    }
+} // window.deleteBtn = index => {
+ //     const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+ //     bookmarks.splice(index, 1);
+ //     saveBookmarks(bookmarks);
+ //     renderBookmarks()
+ // }
 
 },{}]},["851kq","lMvSF"], "lMvSF", "parcelRequire9d56")
 
